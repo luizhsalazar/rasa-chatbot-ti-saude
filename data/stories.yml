@@ -2,29 +2,25 @@ version: "2.0"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+# - story: caminho_01
+#   steps:
+#   - intent: cumprimentar
+#   - action: utter_boas_vindas
+#   - intent: duvidas
+#   - action: utter_pergunta_antes_de_comecar
+#   - intent: confirmar
+#   - action: utter_pergunta_peso_atual
+#   - intent: resposta_peso
+#   - action: utter_pergunta_altura
+#   - intent: resposta_altura
+#   - action: action_calc_imc
+#   - action: utter_despedida
 
-- story: sad path 1
+- story: caminho_02
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: cumprimentar
+  - action: utter_pergunta_peso_atual
+  - intent: resposta_peso
+  - action: utter_pergunta_altura
+  - intent: resposta_altura
+  - action: action_calc_imc

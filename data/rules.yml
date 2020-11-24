@@ -1,13 +1,29 @@
 version: "2.0"
-
+stories:
+- story: Story from Conversation ID 55a32d1afc4842d38a28ee8e5a20cfc4
+  steps:
+  - intent: cumprimentar
+  - action: utter_pergunta_peso_atual
+  - intent: resposta_peso
+    entities:
+    - peso: '75'
+  - slot_was_set:
+    - peso: '75'
+  - action: utter_pergunta_altura
+  - intent: resposta_altura
+    entities:
+    - altura: '1.72'
+  - slot_was_set:
+    - peso: '75'
+  - slot_was_set:
+    - altura: '1.72'
+  - action: action_calc_imc
 rules:
-
 - rule: Say goodbye anytime the user says goodbye
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
+  - intent: despedir
+  - action: utter_despedida
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge
-  - action: utter_iamabot
+  - action: utter_responda_sou_um_bot

@@ -1,92 +1,100 @@
 version: "2.0"
-
 nlu:
-- intent: greet
+- intent: cumprimentar
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-- intent: goodbye
+    - olá
+    - oi
+    - e aí
+    - bom dia
+    - boa tarde
+    - boa noite
+    - Oi
+    - OI
+- intent: despedir
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
+    - tchau
+    - boa noite
+    - até mais
+    - até logo
+    - até breve
+    - valeu
+    - tchay
+- intent: confirmar
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
+    - sim
+    - s
+    - ok
+    - com certeza
+    - isso mesmo
+    - correto
+    - siiim
+- intent: negar
   examples: |
-    - no
+    - não
+    - nao
     - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
+    - jamais
+    - nunca
+    - acho que nao
+    - acho que n
+    - sem chances
+- intent: duvidas
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
+    - tenho duvida
+    - tenho dúvida
+    - tenho uma dúvida
+    - gostaria de saber
+    - gostaria de entender
+    - duvidas
+    - Tenho dúvidas
+    - tenho duvidas
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - você é um bot?
+    - você é um humano?
+    - estou falando com um bot?
+    - estou falando com um humano?
+- intent: resposta_peso
+  examples: |
+    - [51](peso)
+    - [53](peso)
+    - 60
+    - [65](peso)
+    - [72](peso)
+    - [75](peso)
+    - [80](peso)
+    - [82](peso)
+    - [90](peso)
+    - [95](peso)
+    - [102](peso)
+    - meu peso é 60
+    - meu peso atual é [60](peso)
+    - meu peso atual é [64](peso)
+    - meu peso é [75](peso)
+    - meu peso é [75](peso) kg
+    - meu peso atual é [90](peso)
+    - meu peso atual é [65](peso)
+    - meu peso atual é [89](peso)
+    - meu peso é 80
+    - 10
+- intent: resposta_altura
+  examples: |
+    - [1.55](altura)
+    - [1.60](altura)
+    - [1.62](altura)
+    - [1.68](altura)
+    - [1.72](altura)
+    - [1.75](altura)
+    - [1.80](altura)
+    - [1.82](altura)
+    - minha altura é [1.74](altura)
+    - [1.74](altura)
+    - minha altura é [1.72](peso)
+    - minha altura é [1.55](peso)
+    - minha altura é 180
+- regex: altura
+  examples: |
+    - 1\.[0-9]{2}
+- regex: peso
+  examples: |
+    - [0-9]{2}

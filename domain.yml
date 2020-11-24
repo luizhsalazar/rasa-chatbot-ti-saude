@@ -2,24 +2,39 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
+- cumprimentar
+- despedir
+- confirmar
+- negar
 - bot_challenge
+- duvidas
+- resposta_peso
+- resposta_altura
+entities:
+- altura
+- peso
+slots:
+  altura:
+    type: text
+    influence_conversation: false
+  peso:
+    type: text
+    influence_conversation: false
 responses:
-  utter_greet:
-  - text: Hey! How are you?
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_happy:
-  - text: Great, carry on!
-  utter_goodbye:
-  - text: Bye
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  utter_boas_vindas:
+  - text: Olá! Seja bem-vind@!
+  utter_pergunta_antes_de_comecar:
+  - text: Antes de começarmos, deixa eu fazer umas perguntas rápidas para poder te
+      ajudar. Pode ser?
+  utter_pergunta_peso_atual:
+  - text: Qual é o seu peso atual (em KG)?
+  utter_pergunta_altura:
+  - text: E qual é a sua altura (em metros)?
+  utter_pergunta_isto_ajudou:
+  - text: Estas informações ajudaram você?
+  utter_responda_sou_um_bot:
+  - text: Eu sou um assistente virtual :)
+  utter_despedida:
+  - text: Até logo!
+actions:
+- action_calc_imc
