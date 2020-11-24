@@ -19,11 +19,19 @@ stories:
     - altura: '1.72'
   - action: action_calc_imc
 rules:
-- rule: Say goodbye anytime the user says goodbye
+- rule: Despedir toda vez que o usuário se despedir
   steps:
   - intent: despedir
   - action: utter_despedida
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Responder que é um bot toda vez que for perguntado
   steps:
   - intent: bot_challenge
   - action: utter_responda_sou_um_bot
+- rule: Perguntar se tem alguma dúvida toda vez que o usuário agradecer
+  steps:
+  - intent: agradecer
+  - action: utter_pergunta_mais_duvidas
+- rule: Pedir para o usuário repetir quando a confiança da NLU for baixa
+  steps:
+  - intent: nlu_fallback
+  - action: utter_refaca_pergunta

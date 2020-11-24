@@ -7,9 +7,18 @@ intents:
 - confirmar
 - negar
 - bot_challenge
-- duvidas
+- duvidas_gerais
+- duvidas_obesidade
+- duvidas_jejum
+- duvidas_ingestao_agua
+- duvidas_agua_com_limao
+- duvidas_suco_detox
+- duvidas_gluten_lactose
 - resposta_peso
 - resposta_altura
+- agradecer
+- duvidas_retirada_gluten_lactose
+- nlu_fallback
 entities:
 - altura
 - peso
@@ -30,6 +39,42 @@ responses:
   - text: Qual é o seu peso atual (em KG)?
   utter_pergunta_altura:
   - text: E qual é a sua altura (em metros)?
+  utter_esclarece_duvidas:
+  - text: Claro! Quais são as dúvidas que você gostaria de esclarecer?
+  utter_resposta_obesidade:
+  - text: Não existem alimentos que fazem ganhar ou perder peso. Dependendo do objetivo
+      você deve aumentar ou diminuir o déficit calórico. Independente do objetivo,
+      procure consumir alimentos in natura, diminuir a quantidade de alimentos processados
+      e evitar ultraprocessados. Consumir frutas pelo menos 2x ao dia e consumo diário
+      de vegetais. Quantidade de macronutrientes (proteínas, carboidratos e gorduras)
+      são individuais e variam conforme o objetivo e o paciente.
+  utter_resposta_jejum:
+  - text: O jejum é um tipo de estratégia nutricional. Antes de pensar em utilizar
+      uma estratégia nutricional, procure um profissional para ver se ela se pode
+      ser utilizada ao seu objetivo e seu estado de saúde atual.
+  utter_resposta_ingestao_agua:
+  - text: A quantidade de água ingerida varia de pessoa para pessoa. Você pode utilizar
+      uma média de 30ml/kg e ver quanto você precisa consumir. Se você tem doenças
+      crônicas, como problemas renais, consulte um especialista!
+  utter_resposta_agua_com_limao:
+  - text: A água com limão apenas contém uma boa quantidade de vitamina C, porém não
+      auxilia diretamente no emagrecimento.
+  utter_resposta_suco_detox:
+  - text: O nosso corpo naturalmente faz "detox" através do fígado, esses sucos podem
+      auxiliar no sentido de proporcionar maior aporte de vitaminas, mas não tem função
+      de "desintoxicar" algo.
+  utter_resposta_gluten_lactose:
+  - text: A retirada de glúten e lactose só deve ser feita em casos de alergia ou
+      intolerância, caso contrário, não é necessário ser feito. O glúten e a lactose
+      não tem o poder de emagrecer ou engordar alguém.
+  utter_resposta_retirada_gluten_lactose:
+  - text: O seu corpo pode deixar de produzir as enzimas que digerem o glúten e a
+      lactose, por exemplo. E aí você precisará obrigatoriamente tirá-los da sua dieta.
+  utter_refaca_pergunta:
+  - text: Desculpe, mas não consegui entender :( Você poderia refazer a pergunta de
+      outra forma, por favor?
+  utter_pergunta_mais_duvidas:
+  - text: Legal! Gostaria de esclarecer mais alguma dúvida?
   utter_pergunta_isto_ajudou:
   - text: Estas informações ajudaram você?
   utter_responda_sou_um_bot:

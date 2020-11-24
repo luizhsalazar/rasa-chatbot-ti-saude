@@ -10,6 +10,8 @@ nlu:
     - boa noite
     - Oi
     - OI
+    - Bom dia
+    - Olá
 - intent: despedir
   examples: |
     - tchau
@@ -19,6 +21,7 @@ nlu:
     - até breve
     - valeu
     - tchay
+    - tchau!
 - intent: confirmar
   examples: |
     - sim
@@ -28,6 +31,20 @@ nlu:
     - isso mesmo
     - correto
     - siiim
+    - sim!
+- intent: agradecer
+  examples: |
+    - ah bacana
+    - ah legal!
+    - ok obrigado
+    - agradeço a ajuda
+    - muito obrigado
+    - ah legal! obrigado
+    - ah, obrigado!
+    - Ok, obrigado!
+    - ok, obrigado!
+    - hmm legal!
+    - ok, obrigado! muito legal saber isso
 - intent: negar
   examples: |
     - não
@@ -38,7 +55,7 @@ nlu:
     - acho que nao
     - acho que n
     - sem chances
-- intent: duvidas
+- intent: duvidas_gerais
   examples: |
     - tenho duvida
     - tenho dúvida
@@ -48,6 +65,62 @@ nlu:
     - duvidas
     - Tenho dúvidas
     - tenho duvidas
+    - Bom dia! Queria esclarecer algumas dúvidas
+    - Legal! Posso tirar mais algumas dúvidas?
+    - tenho outra dúvida
+- intent: duvidas_obesidade
+  examples: |
+    - perder peso
+    - ganhar massa muscular
+    - perder a barriga
+    - emagrecer
+    - parar de comer
+    - vontade de comer
+    - dieta
+    - melhorar alimentação
+- intent: duvidas_jejum
+  examples: |
+    - jejum
+    - jejum intermitente
+    - jejum emagrece
+    - tipos jejum
+    - treino em jejum
+    - Jejum intermitente é bom?
+    - jejum intermitente é bom?
+- intent: duvidas_ingestao_agua
+  examples: |
+    - quantos litros por dia
+    - litros de água por dia
+    - litros beber água
+    - litros por
+    - Quantos litros de água eu tenho que beber por dia?
+- intent: duvidas_agua_com_limao
+  examples: |
+    - água com limão emagrece
+    - água com limão perder peso
+    - Água com limão emagrece?
+- intent: duvidas_suco_detox
+  examples: |
+    - suco detox emagrece
+    - detox perder peso
+    - detox desentoxica
+- intent: duvidas_gluten_lactose
+  examples: |
+    - dieta sem gluten
+    - dieta sem lactose
+    - gluten free
+    - lactose free
+    - lac free
+- intent: duvidas_retirada_gluten_lactose
+  examples: |
+    - Para emagrecer, preciso retirar glúten e lactose da minha dieta?
+    - não consumir gluten
+    - não consumir lactose
+    - retirar gluten muito tempo
+    - retirar lactose muito tempo
+    - tirar gluten
+    - tirar lactose
+    - O que pode acontecer se eu tirar glúten e lactose da minha dieta por muito tempo?
 - intent: bot_challenge
   examples: |
     - você é um bot?
@@ -77,6 +150,9 @@ nlu:
     - meu peso atual é [89](peso)
     - meu peso é 80
     - 10
+    - Meu peso atual é [102](peso) kg
+    - meu peso atual é [80](peso) kg
+    - meu peso é [102](peso)
 - intent: resposta_altura
   examples: |
     - [1.55](altura)
@@ -92,6 +168,12 @@ nlu:
     - minha altura é [1.72](peso)
     - minha altura é [1.55](peso)
     - minha altura é 180
+    - [1.58](altura)
+    - [1.54](altura)
+    - [1.78](altura)
+- intent: nlu_fallback
+  examples: |
+    - Putz! E agora?
 - regex: altura
   examples: |
     - 1\.[0-9]{2}
