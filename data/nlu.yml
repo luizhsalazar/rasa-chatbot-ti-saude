@@ -8,6 +8,7 @@ nlu:
     - bom dia
     - boa tarde
     - boa noite
+    - Boa noite
     - Oi
     - OI
     - Bom dia
@@ -22,6 +23,9 @@ nlu:
     - valeu
     - tchay
     - tchau!
+    - não! até mais
+    - tchau thcau
+    - não, obrigado! até mais
 - intent: confirmar
   examples: |
     - sim
@@ -32,9 +36,11 @@ nlu:
     - correto
     - siiim
     - sim!
+    - ah bacana
+    - show!
+    - ah, legal!
 - intent: agradecer
   examples: |
-    - ah bacana
     - ah legal!
     - ok obrigado
     - agradeço a ajuda
@@ -45,6 +51,11 @@ nlu:
     - ok, obrigado!
     - hmm legal!
     - ok, obrigado! muito legal saber isso
+    - obrigado
+    - ah legal
+    - ah, legal
+    - oba, legal!
+    - obrigado!
 - intent: negar
   examples: |
     - não
@@ -68,6 +79,13 @@ nlu:
     - Bom dia! Queria esclarecer algumas dúvidas
     - Legal! Posso tirar mais algumas dúvidas?
     - tenho outra dúvida
+    - gostaria saber se estou acima do peso
+    - tenho dúvidas sobre alimentação saudável
+    - Gostaria de saber se estou acima do peso
+    - gostaria de saber como estou de saúde
+    - tenho algumas dúvidas sobre obesidade
+    - opa, legal! tenho outra duvida
+    - tenho outra duvida
 - intent: duvidas_obesidade
   examples: |
     - perder peso
@@ -78,6 +96,11 @@ nlu:
     - vontade de comer
     - dieta
     - melhorar alimentação
+    - o  que posso fazer para emagrecer?
+    - o que eu devo comer para emagrecer?
+    - o que eu posso comer para emagrecer
+    - como eu posso emagrecer?
+    - e o que eu posso fazer para perder peso?
 - intent: duvidas_jejum
   examples: |
     - jejum
@@ -87,6 +110,12 @@ nlu:
     - treino em jejum
     - Jejum intermitente é bom?
     - jejum intermitente é bom?
+    - jejum intermitente emagrece?
+    - jejum emagrece?
+    - quais os tipos de jejum?
+    - treinar em jejum pode ser um problema?
+    - Treinar em jejum funciona?
+    - Oi! Treinar em jejum funciona?
 - intent: duvidas_ingestao_agua
   examples: |
     - quantos litros por dia
@@ -94,16 +123,23 @@ nlu:
     - litros beber água
     - litros por
     - Quantos litros de água eu tenho que beber por dia?
+    - quanto de água devo beber por dia?
+    - quanta água eu devo tomar por dia?
 - intent: duvidas_agua_com_limao
   examples: |
     - água com limão emagrece
     - água com limão perder peso
     - Água com limão emagrece?
+    - água com limão emagrece?
+    - agua com limao emagrece?
+    - tomar água com limão emagrece?
 - intent: duvidas_suco_detox
   examples: |
     - suco detox emagrece
     - detox perder peso
     - detox desentoxica
+    - suco detox emagrece?
+    - Suco detox funciona para emagrecer?
 - intent: duvidas_gluten_lactose
   examples: |
     - dieta sem gluten
@@ -111,9 +147,9 @@ nlu:
     - gluten free
     - lactose free
     - lac free
+    - Para emagrecer, preciso retirar glúten e lactose da minha dieta?
 - intent: duvidas_retirada_gluten_lactose
   examples: |
-    - Para emagrecer, preciso retirar glúten e lactose da minha dieta?
     - não consumir gluten
     - não consumir lactose
     - retirar gluten muito tempo
@@ -121,6 +157,8 @@ nlu:
     - tirar gluten
     - tirar lactose
     - O que pode acontecer se eu tirar glúten e lactose da minha dieta por muito tempo?
+    - retirar gluten
+    - posso retirar o gluten para emagrecer?
 - intent: bot_challenge
   examples: |
     - você é um bot?
@@ -131,7 +169,7 @@ nlu:
   examples: |
     - [51](peso)
     - [53](peso)
-    - 60
+    - [60](peso)
     - [65](peso)
     - [72](peso)
     - [75](peso)
@@ -153,6 +191,8 @@ nlu:
     - Meu peso atual é [102](peso) kg
     - meu peso atual é [80](peso) kg
     - meu peso é [102](peso)
+    - meu peso  é [80](peso)
+    - meu peso é [64](peso) kg
 - intent: resposta_altura
   examples: |
     - [1.55](altura)
@@ -171,9 +211,24 @@ nlu:
     - [1.58](altura)
     - [1.54](altura)
     - [1.78](altura)
+    - [1.67](altura)
+    - [1.73](altura)
+- intent: duvidas_peso_atual
+  examples: |
+    - dúvidas peso atual
+    - dúvida com a minha saúde
+    - gostaria saber se estou abaixo do peso
+    - gostaria saber se meu peso está normal
+    - meu peso está normal?
+    - estou acima do peso?
+    - como eu faço para perder peso?
 - intent: nlu_fallback
   examples: |
     - Putz! E agora?
+    - dieta cetogênica é boa?
+    - [167](peso)
+    - [1,67](peso)
+    - Existe algum método para perda de peso ser duradoura?
 - regex: altura
   examples: |
     - 1\.[0-9]{2}

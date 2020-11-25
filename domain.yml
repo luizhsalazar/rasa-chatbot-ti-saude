@@ -18,6 +18,7 @@ intents:
 - resposta_altura
 - agradecer
 - duvidas_retirada_gluten_lactose
+- duvidas_peso_atual
 - nlu_fallback
 entities:
 - altura
